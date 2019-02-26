@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "ngx-strapi-lib": {
+      "root": "projects/ngx-strapi-lib",
+      "sourceRoot": "projects/ngx-strapi-lib/src",
+      "projectType": "library",
+      "prefix": "enl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-strapi-lib/tsconfig.lib.json",
+            "project": "projects/ngx-strapi-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-strapi-lib/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-strapi-lib/src/test.ts",
+            "tsConfig": "projects/ngx-strapi-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-strapi-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-strapi-lib/tsconfig.lib.json",
+              "projects/ngx-strapi-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-strapi"
