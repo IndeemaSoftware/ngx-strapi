@@ -20,7 +20,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## This module is created for help interact with Strapi https://strapi.io/
 
-In module there exists 5 methods for interact with Strapi API
+In module there exists 5 methods for interact with Strapi API and generate Json Web Token
 
 1. `view` is created for get information about content
 
@@ -35,7 +35,9 @@ In module there exists 5 methods for interact with Strapi API
 6. `jwt` is for generate the Json Web Token
 
 You can use this functionality for interact with Strapi API.
-Just call the `viev` function like this.exapmleService.view(url).subscribe(res => console.log(res));
+
+Just call the `viev` function like `this.exapmleService.view('url').subscribe(res => console.log(res));`.
+
 Wiht this functionality you can work with all basic Strapi contents created by default and don't write services for each content separately for Strapi.
 
 There is also functionality for authorization with Strapi
