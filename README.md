@@ -20,6 +20,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## This module is created for help interact with Strapi https://strapi.io/
 
+ `import { DefaultRestService } from ’ngx-strapi’;` for import REST service
+ `import { NgxStrapiLibService } from ’ngx-strapi’;` for import Auth service
+
+
 In module there exists 5 methods for interact with Strapi API and generate Json Web Token
 
 1. `view` is created for get information about content
