@@ -11,23 +11,23 @@ export class DefaultRestService {
   constructor(private http: Http) { }
 
   view(data) {
-    return this.http.get('' + data.url, this.jwt()).pipe(map((response: Response) => response.json()));
+    return this.http.get(data.url, this.jwt()).pipe(map((response: Response) => response.json()));
   }
 
   list(data) {
-    return this.http.get('' + data.url, this.jwt()).pipe(map((response: Response) => response.json()));
+    return this.http.get(data.url, this.jwt()).pipe(map((response: Response) => response.json()));
   }
 
   create(data) {
-    return this.http.post('' + data.url, data, this.jwt()).pipe(map((response: Response) => response.json()));
+    return this.http.post(data.url, data, this.jwt()).pipe(map((response: Response) => response.json()));
   }
 
   update(data) {
-    return this.http.put('' + data.url, data, this.jwt()).pipe(map((response: Response) => response.json()));
+    return this.http.put(data.url, data, this.jwt()).pipe(map((response: Response) => response.json()));
   }
 
   delete(data) {
-    return this.http.delete('' + data.url, this.jwt()).pipe(map((response: Response) => response.json()));
+    return this.http.delete(data.url, this.jwt()).pipe(map((response: Response) => response.json()));
   }
 
   private jwt() {
